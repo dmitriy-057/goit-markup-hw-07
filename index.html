@@ -23,40 +23,44 @@
   <body>
     <!-- Хедер-->
     <header class="header">
-      <div class="conteiner header-conteiner">
+      <div class="conteiner header__conteiner">
         <!-- Лого -->
-        <a class="header-link link" href="./"
-          ><span class="logo-text">Web</span>Studio</a
+        <a class="link logo" href="./"
+          ><span class="logo__text">Web</span>Studio</a
         >
 
         <!-- Навигация-->
-        <nav class="nav">
-          <ul class="nav-list list">
-            <li class="nav-item">
-              <a class="nav-link link current" href=""> Студия </a>
+        <nav class="nav header__nav">
+          <ul class="list nav__list">
+            <li class="nav__item">
+              <a class="link nav__link nav__link--current" href=""> Студия </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link link" href="./portfolio.html"> Портфолио </a>
+            <li class="nav__item">
+              <a class="link nav__link" href="./portfolio.html"> Портфолио </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link link" href=""> Контакты </a>
+            <li class="nav__item">
+              <a class="link nav__link" href=""> Контакты </a>
             </li>
           </ul>
         </nav>
 
         <!-- Контакты -->
-        <ul class="header-list list">
-          <li class="header-item">
-            <a class="contacts link" lang="en" href="info@devstudio.com">
-              <svg class="contacts-icon-email">
+        <ul class="list header__list">
+          <li class="header__item">
+            <a
+              class="link header__contacts"
+              lang="en"
+              href="info@devstudio.com"
+            >
+              <svg class="header__email">
                 <use href="images/icon/symbol-defs.svg#icon-email"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="header-item">
-            <a class="contacts link" href="tel:+380961111111">
-              <svg class="contacts-icon-phone">
+          <li class="header__item">
+            <a class="link header__contacts" href="tel:+380961111111">
+              <svg class="header__phone">
                 <use href="images/icon/symbol-defs.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11
@@ -69,12 +73,12 @@
     <main>
       <!--Герой-->
       <section class="hero">
-        <div class="conteiner hero-conteiner">
-          <h1 class="hero-title">
+        <div class="conteiner hero__conteiner">
+          <h1 class="hero__title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-button button" type="button" data-modal-open>
+          <button class="button hero__button" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -82,36 +86,37 @@
 
       <!-- Особенности -->
       <section class="particular">
-        <div class="conteiner particular-conteiner">
-          <h2 class="particular-title visually-hidden">Наши особенности</h2>
-          <ul class="particular-list list">
-            <li class="particular-item icon-item">
-              <h3 class="particular-subtitle">Внимание к деталям</h3>
-              <p class="particular-text">
+        <div class="conteiner particular__conteiner">
+          <h2 class="particular__title visually-hidden">Наши особенности</h2>
+
+          <ul class="list particular__list">
+            <li class="particular__item particular__item--front">
+              <h3 class="particular__subtitle">Внимание к деталям</h3>
+              <p class="particular__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
 
-            <li class="particular-item icon-item">
-              <h3 class="particular-subtitle">Пунктуальность</h3>
-              <p class="particular-text">
+            <li class="particular__item particular__item--front">
+              <h3 class="particular__subtitle">Пунктуальность</h3>
+              <p class="particular__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
 
-            <li class="particular-item icon-item">
-              <h3 class="particular-subtitle">Планирование</h3>
-              <p class="particular-text">
+            <li class="particular__item particular__item--front">
+              <h3 class="particular__subtitle">Планирование</h3>
+              <p class="particular__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
 
-            <li class="particular-item icon-item">
-              <h3 class="particular-subtitle">Современные технологии</h3>
-              <p class="particular-text">
+            <li class="particular__item particular__item--front">
+              <h3 class="particular__subtitle">Современные технологии</h3>
+              <p class="particular__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -122,51 +127,52 @@
 
       <!-- О нас-->
       <section class="about">
-        <div class="conteiner about-conteiner">
-          <h2 class="about-title">Чем мы занимаемся</h2>
-          <ul class="about-list list">
-            <li class="about-item">
-              <div class="about-photo-conteiner">
+        <div class="conteiner about__conteiner">
+          <h2 class="about__title">Чем мы занимаемся</h2>
+          <ul class="list about__list">
+            <li class="about__item">
+              <div class="about__photo-conteiner">
                 <img
-                  class="about-photo"
+                  class="about__photo"
                   src="./images/box1.jpg"
                   alt="development-sites"
                   width="370"
                 />
-                <p class="about-photo-text">Десктопные приложения</p>
+                <p class="about__photo-text">Десктопные приложения</p>
               </div>
             </li>
-            <li class="about-item">
-              <div class="about-photo-conteiner">
+            <li class="about__item">
+              <div class="about__photo-conteiner">
                 <img
-                  class="about-photo"
+                  class="about__photo"
                   src="./images/box2.jpg"
                   alt="development-mobile-application"
                   width="370"
                 />
-                <p class="about-photo-text">Мобильные приложения</p>
+                <p class="about__photo-text">Мобильные приложения</p>
               </div>
             </li>
-            <li class="about-item">
-              <div class="about-photo-conteiner">
+            <li class="about__item">
+              <div class="about__photo-conteiner">
                 <img
-                  class="about-photo"
+                  class="about__photo"
                   src="./images/box3.jpg"
                   alt="ui-design"
                   width="370"
                 />
-                <p class="about-photo-text">Дизайнерские решения</p>
+                <p class="about__photo-text">Дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
+
       <!-- Наша команда-->
       <section class="team">
-        <div class="conteiner team-conteiner">
-          <h2 class="team-title">Наша команда</h2>
-          <ul class="team-list list">
-            <li class="team-item">
+        <div class="conteiner team__conteiner">
+          <h2 class="team__title">Наша команда</h2>
+          <ul class="list our-team">
+            <li class="our-team__item">
               <img
                 class="team-person"
                 src="./images/igor.jpg"
@@ -216,7 +222,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="our-team__item">
               <img
                 class="team-person"
                 src="./images/olga.jpg"
@@ -266,7 +272,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="our-team__item">
               <img
                 class="team-person"
                 src="./images/nikolay.jpg"
@@ -316,7 +322,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item">
+            <li class="our-team__item">
               <img
                 class="team-person"
                 src="./images/michael.jpg"
