@@ -358,57 +358,58 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
-.our-team {
+.team__list {
   display: flex;
 }
-.our-team__item {
+.own-card {
   margin-right: var(--main-li-margin);
   flex-basis: calc((100% - 3 * var(--main-li-margin)) / 4);
 }
-.our-team__item:last-child {
+.own-card:last-child {
   margin-right: 0px;
 }
 
-.our-team__item {
+.own-card {
   background-color: var(--secondary-background-color);
   border-radius: 4px;
   transition: box-shadow 250ms var(--timing-formating);
 }
-.our-team__item:hover {
+.own-card:hover {
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
 }
-.person-name {
+.own__conteiner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.own__name {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.19;
   text-align: center;
   margin-bottom: 10px;
 }
-.person-text {
+.own__text {
   font-size: 16px;
   line-height: 1.17;
   color: var(--secondary-color);
   text-align: center;
 }
-.person-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.personal-list {
+
+.socials-pages {
   list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
-.personal-item {
+.socials-pages__item {
   margin-right: 10px;
   text-align: center;
 }
-.personal-item:last-child {
+.socials-pages__item:last-child {
   margin-right: 0px;
 }
-.personal-link {
+.socials-pages__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -419,13 +420,13 @@ img {
   transition: background-color 250ms var(--timing-formating),
     fill 250ms var(--timing-formating);
 }
-.personal-link-card {
+.socials-pages__icon {
   width: 20px;
   height: 20px;
 }
 
-.personal-item :hover.personal-link,
-.personal-item :focus.personal-link {
+.socials-pages__item :hover.socials-pages__link,
+.socials-pages__item :focus.socials-pages__link {
   fill: #ffffff;
   background-color: var(--hover-color);
 }
@@ -434,25 +435,25 @@ img {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
 }
-.clients-title {
+.clients__title {
   font-size: 36px;
   font-weight: 700;
   line-height: 42px;
   text-align: center;
 }
-.clients-list {
+.clients__list {
   margin-top: 50px;
   list-style: none;
   display: flex;
 }
-.clients-item {
+.clients__item {
   margin-right: var(--main-li-margin);
   flex-basis: calc(100% - 5 * var(--main-li-margin) / 6);
 }
-.clients-item:last-child {
+.clients__item:last-child {
   margin-right: 0px;
 }
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,12 +468,12 @@ img {
   transition: fill 250ms var(--timing-formating),
     border 250ms var(--timing-formating);
 }
-.clients-link-card {
+.clients__link-card {
   width: 106px;
   height: 60px;
 }
-.clients-item :hover.clients-link,
-.clients-item :focus.clients-link {
+.clients__item :hover.clients__link,
+.clients__item :focus.clients__link {
   fill: var(--hover-color);
   border: 1px solid var(--hover-color);
 }
@@ -481,11 +482,8 @@ img {
 
 .footer {
   background-color: var(--third-background-color);
-  /* max-width: 1600px; */
   padding-top: 60px;
   padding-bottom: 60px;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 .footer-conteiner {
   display: flex;
@@ -539,7 +537,6 @@ img {
   margin-top: 20px;
   list-style: none;
   display: flex;
-  /* justify-content: center; */
 }
 .footer-icon-item {
   margin-right: 10px;
@@ -577,7 +574,6 @@ img {
 /* Кнопки */
 
 .buttons-list {
-  /* text-align: center; */
   display: flex;
   justify-content: center;
 }
@@ -669,7 +665,6 @@ img {
 .portfolio-thumb::after {
   content: "";
   position: absolute;
-  /* opacity: 0; */
   width: 100%;
   height: 100%;
   bottom: 0;
@@ -678,7 +673,6 @@ img {
   transition: transform 250ms var(--timing-formating);
 }
 .portfolio-item:hover .portfolio-thumb::after {
-  /* opacity: 1; */
   transform: translateY(0);
 }
 .text-image {
@@ -709,7 +703,6 @@ img {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  /* opacity: 1; */
   transition: opacity 250ms var(--timing-formating),
     visibility 250ms var(--timing-formating);
 }
@@ -727,7 +720,6 @@ img {
   top: 50%;
   left: 50%;
   width: 528px;
-  /* height: 581px; */
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-formating);
@@ -737,8 +729,6 @@ img {
   cursor: pointer;
   top: 8px;
   right: 8px;
-  /* width: 30px;
-  height: 30px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -806,13 +796,6 @@ img {
   transition: fill 250ms var(--timing-formating);
 }
 
-/* 1 вариант как изменить цвет иконки(ессли иконка стоит после инпута */
-/* .group-input:focus + .input-icon,
-.group-input:not(:placeholder-shown) + .input-icon {
-  fill: var(--hover-color);
-} */
-
-/* 2 вариант - когда иконка в любом месте в divе */
 .form-group:focus-within .input-icon {
   fill: var(--hover-color);
 }
