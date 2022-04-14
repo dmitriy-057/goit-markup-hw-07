@@ -1,1 +1,19 @@
+// variebles
+@import "./variebles/variebles";
 
+// utils
+@import "./utils/utils";
+@import "./utils/_visually-hidden";
+
+// base
+@import "./base/base";
+
+// components
+@import "./components/container";
+@import "./components/buttons";
+@import "./components/header";
+@import "./components/form/module";
+@import "./components/form/form";
+@import "./components/form/input";
+@import "./components/form/checkbox";
+@import "./components/form/comment";
