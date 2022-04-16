@@ -1,0 +1,55 @@
+/* Проекты */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.portfolio-item {
+  margin-right: var(--main-li-margin);
+  margin-bottom: var(--main-li-margin);
+  flex-basis: calc((100% - 2 * var(--main-li-margin)) / 3);
+}
+.portfolio-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.portfolio-link {
+  transition: box-shadow 250ms var(--timing-formating);
+}
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-color);
+  margin-bottom: 4px;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--secondary-color);
+}
+
+.portfolio-link {
+  display: inline-block;
+  width: 370px;
+}
+.portfolio-item :hover.portfolio-link,
+.portfolio-item :focus.portfolio-link {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
+}
+
+.title-conteiner {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-radius: 1px;
+}

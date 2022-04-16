@@ -1,0 +1,47 @@
+/* Клиенты */
+.clients {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.clients__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+}
+.clients__list {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+}
+.clients__item {
+  margin-right: var(--main-li-margin);
+  flex-basis: calc(100% - 5 * var(--main-li-margin) / 6);
+}
+.clients__item:last-child {
+  margin-right: 0px;
+}
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  fill: #afb1b8;
+  transition: fill 250ms var(--timing-formating),
+    border 250ms var(--timing-formating);
+}
+.clients__link-card {
+  width: 106px;
+  height: 60px;
+}
+.clients__item :hover.clients__link,
+.clients__item :focus.clients__link {
+  fill: var(--hover-color);
+  border: 1px solid var(--hover-color);
+}

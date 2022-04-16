@@ -1,0 +1,37 @@
+.form {
+  padding: 40px;
+  outline: 2px solid #000;
+}
+.text-form {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 12px;
+}
+/* Форма ввода */
+.form-group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.group-label {
+  margin-bottom: 4px;
+  color: var(--secondary-color);
+}
+
+.form-submit {
+  cursor: pointer;
+  display: block;
+  background-color: var(--hover-color);
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  border: 0;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}

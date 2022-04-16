@@ -1,0 +1,86 @@
+/* Футер */
+
+.footer {
+  background-color: var(--third-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-conteiner {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-link {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 145px;
+  margin-bottom: 20px;
+}
+.address {
+  font-style: normal;
+  width: 231px;
+}
+
+.address-location {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+.footer-contacts {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-formating);
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: var(--hover-color);
+}
+/* Присоединяйтесь */
+.footer-icon-conteiner {
+  margin-left: 70px;
+}
+.footer-icon-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
+  color: #ffffff;
+}
+.footer-icon-list {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+}
+.footer-icon-item {
+  margin-right: 10px;
+  text-align: center;
+}
+.footer-icon-item:last-child {
+  margin-right: 0px;
+}
+.footer-icon-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-formating);
+}
+.footer-icon-card {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+.footer-icon-item :hover.footer-icon-link,
+.footer-icon-item :focus.footer-icon-link {
+  background-color: var(--hover-color);
+}
