@@ -22,86 +22,87 @@
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
-}
-
-.logo {
-  font-family: var(--secondary-font);
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: #000;
+  font-family: $secondary-font;
+  // font-size: 26px;
+  // font-weight: 700;
+  // line-height: 1.2;
+  // letter-spacing: 0.03em;
+  @include fonts(26px, 700, 1.2em);
+  &.logo--dark {
+    color: #000;
+  }
 }
 /* Навигация */
 .nav__link {
   color: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
+  @include fonts(14px, 500, 1.14em);
+  // font-size: 14px;
+  // font-weight: 500;
+  // line-height: 1.14;
   padding: 32px 0;
-  transition: color 250ms var(--timing-formating);
+  transition: color 250ms $timing-formating;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &.nav__link--current {
+    position: relative;
+    color: $hover-color;
+
+    /* Синее подчеркивание */
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $hover-color;
+      border-radius: 2px;
+      opacity: 1;
+    }
+  }
 }
 
-.nav__link:hover,
-.nav__link:focus {
-  color: var(--hover-color);
-}
-.nav__link--current {
-  position: relative;
-  color: var(--hover-color);
-}
-
-/* Синее подчеркивание */
-.nav__link--current::after {
-  position: absolute;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--hover-color);
-  border-radius: 2px;
-  opacity: 1;
-}
-.nav__item:not(:last-child) {
+&.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
 /* контакты */
-.header__list {
+.header-contacts {
   display: flex;
   align-items: center;
 }
-.header__item:not(:last-child) {
+&.header-contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header__contacts {
+.header-contacts__link {
   display: flex;
   align-items: center;
-}
-.header__contacts {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
-  color: var(--secondary-color);
+  color: $secondary-color;
   text-decoration: none;
   padding: 31px 0 32px;
-  transition: color 250ms var(--timing-formating);
+  transition: color 250ms $timing-formating;
+
+  .header-contacts__item :hover &,
+  .header-contacts__item :focus & {
+    color: $hover-color;
+  }
 }
 
-.header__item :hover.header__contacts,
-.header__item :focus.header__contacts {
-  color: var(--hover-color);
-}
-
-.header__email {
+.header-contacts__email {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
-.header__phone {
+.header-contacts__phone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
