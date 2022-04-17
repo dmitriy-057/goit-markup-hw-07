@@ -6,13 +6,13 @@
   align-items: center;
   margin-bottom: 30px;
 }
-.checkbox-input {
+.form-checkbox__input {
   width: 16px;
   height: 15px;
 }
 
 /* Иконка */
-.checkbox-icon {
+.form-checkbox__icon {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -22,29 +22,31 @@
   border-radius: 2px;
   width: 16px;
   height: 15px;
-  transition: background-color 250ms var(--timing-formating),
-    background-image 250ms var(--timing-formating);
+  transition: background-color 250ms $timing-formating,
+    background-image 250ms $timing-formating;
+
+  .form-checkbox__input:checked + & {
+    border-color: $hover-color;
+    background-color: $hover-color;
+    background-image: url(../images/icon/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+  .form-checkbox__input:focus + & {
+    border: 2px solid $hover-color;
+    border-radius: 2px;
+  }
 }
-.checkbox-input:checked + .checkbox-icon {
-  border-color: var(--hover-color);
-  background-color: var(--hover-color);
-  background-image: url(../images/icon/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-.checkbox-input:focus + .checkbox-icon {
-  border: 2px solid var(--hover-color);
-  border-radius: 2px;
-}
-.checkbox-label {
+
+.form-checkbox__label {
   margin-left: 7px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
 }
-.checkbox-link {
+.form-checkbox__link {
   text-decoration: none;
-  color: var(--hover-color);
+  color: $hover-color;
   border-bottom: 1px solid #2196f3;
 }

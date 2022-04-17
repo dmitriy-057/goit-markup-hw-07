@@ -2,13 +2,11 @@
 .hero {
   background-color: $third-background-color;
   max-width: 1600px;
+  height: 600px;
   padding-bottom: 200px;
   padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
-}
-.hero {
-  height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(48, 48, 58, 0.4)
@@ -42,7 +40,7 @@
   letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
-  background-color: var(--hover-color);
+  background-color: $hover-color;
   border-radius: 4px;
   padding: 10px 32px;
   margin-left: auto;

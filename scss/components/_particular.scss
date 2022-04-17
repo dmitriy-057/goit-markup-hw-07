@@ -1,21 +1,23 @@
 /* Особенности */
 .particular {
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
 }
 .particular__list {
   display: flex;
   flex-wrap: nowrap;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
-.particular__list :last-child {
-  margin-right: 0px;
-}
+
 .particular__item {
   margin-right: 30px;
   flex-basis: calc((100% - 3 * var(--main-li-margin)) / 4);
 }
 
-.visually-hidden {
+.particular__title--visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

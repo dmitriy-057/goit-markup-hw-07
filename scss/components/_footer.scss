@@ -1,7 +1,7 @@
 /* Футер */
 
 .footer {
-  background-color: var(--third-background-color);
+  background-color: $third-background-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -10,13 +10,11 @@
   align-items: baseline;
 }
 
-.footer-link {
+.logo__link {
   display: inline-block;
-  font-family: var(--secondary-font);
+  font-family: $secondary-font;
   color: #fff;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.2;
+  @include fonts($fs: 26px, $fw: 700, $lh: 1.2, $ls: null);
   width: 145px;
   margin-bottom: 20px;
 }
@@ -25,47 +23,49 @@
   width: 231px;
 }
 
-.address-location {
+.address__location {
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.7;
+  @include fonts($fw: null, $lh: 1.7, $ls: null);
   color: #ffffff;
 }
-.footer-contacts {
+.address__contacts {
   display: inline-block;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms var(--timing-formating);
+  transition: color 250ms $timing-formating;
+
+  & :hover,
+  & :focus {
+    color: $hover-color;
+  }
 }
-.address-item:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-contacts:hover,
-.footer-contacts:focus {
-  color: var(--hover-color);
-}
+
 /* Присоединяйтесь */
-.footer-icon-conteiner {
+.footer-icons {
   margin-left: 70px;
 }
-.footer-icon-title {
+.footer-icons__title {
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 1.17;
+  @include fonts($fw: null, $lh: 1.17, $ls: null);
   color: #ffffff;
 }
-.footer-icon-list {
+.footer-icons__list {
   margin-top: 20px;
   list-style: none;
   display: flex;
 }
-.footer-icon-item {
+.footer-icons__item {
   margin-right: 10px;
   text-align: center;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
-.footer-icon-item:last-child {
-  margin-right: 0px;
-}
-.footer-icon-link {
+
+.footer-icons__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -73,14 +73,15 @@
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms var(--timing-formating);
+  transition: background-color 250ms $timing-formating;
+
+  .footer-icons__item:hover &,
+  .footer-icons__item:focus & {
+    background-color: $hover-color;
+  }
 }
-.footer-icon-card {
+.footer-icons__card {
   fill: #ffffff;
   width: 20px;
   height: 20px;
-}
-.footer-icon-item :hover.footer-icon-link,
-.footer-icon-item :focus.footer-icon-link {
-  background-color: var(--hover-color);
 }

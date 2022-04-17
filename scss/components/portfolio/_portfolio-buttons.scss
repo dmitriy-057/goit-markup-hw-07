@@ -1,14 +1,13 @@
 /* Кнопки */
-
-.buttons-list {
+.portfolio__buttons-list {
   display: flex;
   justify-content: center;
 }
 
-.buttons-item:not(:last-child) {
+.portfolio__buttons-item:not(:last-child) {
   margin-right: 8px;
 }
-.portfolio-button {
+.portfolio__buttons {
   font-style: var(--main-font);
   font-size: 16px;
   font-weight: 500;
@@ -21,11 +20,12 @@
   transition: background-color 250ms var(--timing-formating),
     color 250ms var(--timing-formating),
     box-shadow 250ms var(--timing-formating);
-}
-.portfolio-button:hover,
-.portfolio-button:focus {
-  background-color: var(--hover-color);
-  color: #fff;
-  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
-    0px 3px 1px 0px #0000001a;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+    color: #fff;
+    box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+      0px 3px 1px 0px #0000001a;
+  }
 }

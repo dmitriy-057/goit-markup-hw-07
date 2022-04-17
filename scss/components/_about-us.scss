@@ -1,11 +1,9 @@
 /* О нас */
 .about {
-  padding-bottom: var(--main-padding);
+  padding-bottom: $main-padding;
 }
 .about__title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.16;
+  @include fonts(36px, 700, 1.16, null);
   margin-bottom: 50px;
   text-align: center;
 }
@@ -14,11 +12,12 @@
 }
 .about__item {
   padding: 0px;
-  margin-right: var(--main-li-margin);
+  margin-right: $main-li-margin;
   flex-basis: calc((100% - 2 * var(--main-li-margin)) / 3);
-}
-.about__item:last-child {
-  margin-right: 0px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .about__photo-conteiner {
@@ -28,12 +27,9 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
-
   padding: 24px 0px;
-  font-style: var(--main-font);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
+  font-style: $main-font;
+  @include fonts($fw: 700, $lh: 1.14, $ls: null);
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;

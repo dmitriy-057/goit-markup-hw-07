@@ -3,11 +3,11 @@
   display: block;
   margin-bottom: 20px;
 }
-.comment-label {
-  color: var(--secondary-color);
+.form-comment__label {
+  color: $secondary-color;
   margin-bottom: 4px;
 }
-.comment-textarea {
+.form-comment__textarea {
   display: block;
   resize: none;
   width: 448px;
@@ -16,11 +16,12 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: outline 250ms var(--timing-formating);
-}
-.form-comment:focus-within .comment-textarea {
-  outline: 1px solid var(--hover-color);
-}
-.comment-textarea:not(:placeholder-shown) {
-  border: 1px solid var(--hover-color);
+  transition: outline 250ms $timing-formating;
+
+  &:not(:placeholder-shown) {
+    border: 1px solid $hover-color;
+  }
+  .form-comment:focus-within & {
+    outline: 1px solid $hover-color;
+  }
 }
