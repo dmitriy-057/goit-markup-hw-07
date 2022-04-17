@@ -920,56 +920,49 @@ body {
 }
 
 /* Проекты */
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
-.portfolio-item {
-  margin-right: var(--main-li-margin);
-  margin-bottom: var(--main-li-margin);
-  flex-basis: calc((100% - 2 * var(--main-li-margin)) / 3);
+.portfolio__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
-
-.portfolio-item:nth-child(3n) {
+.portfolio__item:nth-child(3n) {
   margin-right: 0px;
 }
-
-.portfolio-item:nth-last-child(-n+3) {
+.portfolio__item:nth-last-child(-n+3) {
   margin-bottom: 0px;
 }
 
-.portfolio-link {
-  transition: box-shadow 250ms var(--timing-formating);
-}
-
-.portfolio-title {
+.portfolio__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--main-color);
+  color: #212121;
   margin-bottom: 4px;
 }
 
-.portfolio-text {
+.portfolio__text {
   font-size: 16px;
   line-height: 1.9;
-  color: var(--secondary-color);
+  color: #757575;
 }
 
-.portfolio-link {
+.portfolio__link {
   display: inline-block;
   width: 370px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-item :hover.portfolio-link,
-.portfolio-item :focus.portfolio-link {
+.portfolio__item:hover .portfolio__link, .portfolio__item:focus .portfolio__link {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.1607843137), 0px 4px 4px 0px rgba(0, 0, 0, 0.0588235294), 0px 1px 1px 0px rgba(0, 0, 0, 0.1215686275);
 }
 
-.title-conteiner {
+.portfolio__title-conteiner {
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -978,4 +971,45 @@ body {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-radius: 1px;
+}
+
+/* Оверлэй */
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-thumb::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio__item:hover .portfolio-thumb::after {
+  transform: translateY(0);
+}
+
+.thumb-text {
+  position: absolute;
+  bottom: 0;
+  translate: -50%, -50%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+.portfolio__item:hover .thumb-text {
+  transform: translateY(0);
+}
+
+.thumb-text__image {
+  color: #fff;
+  font-style: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400px;
+  line-height: 1.55;
+  text-align: left;
+  padding: 63px 24px;
 }/*# sourceMappingURL=main.css.map */
